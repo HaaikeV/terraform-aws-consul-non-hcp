@@ -21,7 +21,7 @@ variable "ami_id" {
 variable "cluster_name" {
   description = "What to name the Consul cluster and all of its associated resources"
   type        = string
-  default     = "consul-example"
+  default     = "consul-sp-dev"
 }
 
 variable "num_servers" {
