@@ -35,7 +35,7 @@ data "aws_ami" "consul" {
   most_recent = true
 
   # If we change the AWS Account in which test are run, update this value.
-  owners = ["317630915053"]
+  owners = ["562637147889"]
 
   filter {
     name   = "virtualization-type"
@@ -49,7 +49,7 @@ data "aws_ami" "consul" {
 
   filter {
     name   = "name"
-    values = ["bitnami-*"]
+    values = ["consul-ubuntu-*"]
   }
 }
 
