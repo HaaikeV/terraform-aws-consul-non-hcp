@@ -49,7 +49,7 @@ data "aws_ami" "consul" {
 
   filter {
     name   = "name"
-    values = ["consul-ubuntu-*"]
+    values = ["bitnami-*"]
   }
 }
 
