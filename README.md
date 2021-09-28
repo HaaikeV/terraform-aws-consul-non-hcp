@@ -134,3 +134,21 @@ This code is released under the Apache 2.0 License. Please see [LICENSE](https:/
 details.
 
 Copyright &copy; 2017 Gruntwork, Inc.
+
+## Custom Notes - Haaike van der Merwe
+
+To run this module the following will be required:
+1. awscli installed: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+2. export AWS_ACCESS_KEY_ID=
+3. export AWS_SECRET_ACCESS_KEY=
+4. export AWS_DEFAULT_REGION=
+5. change variable in variable.tf if you are running anywhere other than dev
+6. execute: terraform init; terraform plan; terraform apply
+7. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
+8. the fizz buzz fizzbuzz project can be located in: ./terraform-aws-consul/examples/consul-examples-kv/1-100.sh
+9. change the consul ip variable in the shell script - the ip you get from step 7.
+10. python is not working yet - it is supposed to implement the bash script.
+
+
+
+
