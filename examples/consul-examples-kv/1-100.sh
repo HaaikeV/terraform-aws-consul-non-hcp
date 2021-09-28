@@ -13,19 +13,5 @@ do
     elif [ "$buzz" -eq 0 ]; then
         echo 'buzz'
     fi
-
-   # buzz=$(( counter % 5 ))
-   # if [ "$buzz" -eq 0 ]; then
-   #     echo 'buzz'
-   # else
-   #     echo 'not 5'
-   # fi
-   # 
-   # if [ "$fizz" -eq 0 ] && [ "$buzz" -eq 0 ]; then
-   #     echo 'fizzbuzz'
-   # else
-   #     echo 'not 5 or 3'
-   # fi
-
     counter=$(($counter+1))
 done
