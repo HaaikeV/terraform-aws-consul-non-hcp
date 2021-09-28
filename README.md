@@ -147,7 +147,8 @@ To run this module the following will be required:
 7. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
 8. the fizz buzz fizzbuzz project can be located in: ./terraform-aws-consul/examples/consul-examples-kv/1-100.sh
 9. change the consul ip variable in the shell script - the ip you get from step 7.
-10. python is not working yet - it is supposed to implement the bash script.
+10. make sure you have python version 3 installed.
+11. to use the python script called install-algorythm.py run: python3 install-algorythm.py and make sure 1-100.sh is in the same directory
 
 
 
