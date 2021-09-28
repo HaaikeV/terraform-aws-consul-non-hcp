@@ -139,16 +139,20 @@ Copyright &copy; 2017 Gruntwork, Inc.
 
 To run this module the following will be required:
 1. awscli installed: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
-2. export AWS_ACCESS_KEY_ID=
-3. export AWS_SECRET_ACCESS_KEY=
-4. export AWS_DEFAULT_REGION=
-5. change variable in variable.tf if you are running anywhere other than dev
-6. execute: terraform init; terraform plan; terraform apply
-7. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
-8. the fizz buzz fizzbuzz project can be located in: ./terraform-aws-consul/examples/consul-examples-kv/1-100.sh
-9. change the consul ip variable in the shell script - the ip you get from step 7.
-10. make sure you have python version 3 installed.
-11. to use the python script called install-algorythm.py run: python3 install-algorythm.py and make sure 1-100.sh is in the same directory
+2. terraform installed: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
+3. export AWS_ACCESS_KEY_ID=
+4. export AWS_SECRET_ACCESS_KEY=
+5. export AWS_DEFAULT_REGION=
+6. mkdir terraform-aws-consul-non-hcp; cd terraform-aws-consul-non-hcp; git init .; git pull https://github.com/HaaikeV/terraform-aws-consul-non-hcp.git
+7. change the "cluster_name" variable in variable.tf if you are running anywhere other than dev
+8. execute: terraform init; terraform plan; terraform apply
+9. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
+10. the fizz buzz fizzbuzz project can be located in: ./examples/consul-examples-kv/1-100.sh
+11. change the consul ip variable in the shell script - the ip you get from step 9.
+12. make sure you have python version 3 installed.
+13. the python algorithm script can be located at: ./examples/consul-examples-kv/install-algorythm.py
+14. to use the python script called install-algorithm.py run: python3 install-algorythm.py and make sure 1-100.sh is in the same directory
+15. to test if the script worked you can run: consul kv get -http-addr=$consul_cluster_ip:8500 3
 
 
 
