@@ -137,22 +137,29 @@ Copyright &copy; 2017 Gruntwork, Inc.
 
 ## Custom Notes - Haaike van der Merwe
 
-To run this module the following will be required:
-1. awscli installed: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
-2. terraform installed: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
-3. export AWS_ACCESS_KEY_ID=
-4. export AWS_SECRET_ACCESS_KEY=
-5. export AWS_DEFAULT_REGION=
-6. mkdir terraform-aws-consul-non-hcp; cd terraform-aws-consul-non-hcp; git init .; git pull https://github.com/HaaikeV/terraform-aws-consul-non-hcp.git
-7. change the "cluster_name" variable in variable.tf if you are running anywhere other than dev
-8. execute: terraform init; terraform plan; terraform apply
-9. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
-10. the fizz buzz fizzbuzz project can be located in: ./examples/consul-examples-kv/1-100.sh
-11. change the consul ip variable in the shell script - the ip you get from step 9.
-12. make sure you have python version 3 installed.
-13. the python algorithm script can be located at: ./examples/consul-examples-kv/install-algorythm.py
-14. to use the python script called install-algorithm.py run: python3 install-algorythm.py and make sure 1-100.sh is in the same directory
-15. to test if the script worked you can run: consul kv get -http-addr=$consul_cluster_ip:8500 3
+To run this module the following will be required on the jump host, or control node you are running terraform from:
+1. install the following repos:
+subscription-manager repos --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-server-rhscl-7-rpms
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+2. install unzip: yum install unzip -y
+3. install jq: yum install jq -y
+4. install python3: yum install python3 -y
+5. awscli installed: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+6. terraform installed: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
+7. consul installed: https://learn.hashicorp.com/tutorials/consul/get-started-install#install-consul
+8. export AWS_ACCESS_KEY_ID=
+9. export AWS_SECRET_ACCESS_KEY=
+10. export AWS_DEFAULT_REGION=
+11. mkdir terraform-aws-consul-non-hcp; cd terraform-aws-consul-non-hcp; git init .; git pull https://github.com/HaaikeV/terraform-aws-consul-non-hcp.git
+12. change the "cluster_name" variable in variable.tf if you are running anywhere other than dev
+13. execute: terraform init; terraform plan; terraform apply
+14. to get the cluster info, execute from the root terraform-aws-consul dir: ./examples/consul-examples-helper/consul-examples-helper.sh
+15. the fizz buzz fizzbuzz project can be located in: ./examples/consul-examples-kv/1-100.sh
+16. change the consul ip variable in the shell script - the ip you get from step 14.
+17. make sure you have python version 3 installed.
+18. the python algorithm script can be located at: ./examples/consul-examples-kv/install-algorythm.py
+19. to use the python script called install-algorithm.py run: python3 install-algorythm.py and make sure 1-100.sh is in the same directory
+20. to test if the script worked you can run: consul kv get -http-addr=$consul_cluster_ip:8500 3
 
 
 
